@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form action="http://zertifikatepruefen.multicheck.ch/" enctype="multipart/form-data" id="formID" method="post" name="nform">    <div class="wrapper">
+<form action="" enctype="multipart/form-data" id="formID" method="post" name="nform">    <div class="wrapper">
         <div class="header">
             <div class="header-logo">
                 <img src="./assets/logo.png" alt="Multicheck®">
@@ -98,39 +98,6 @@ input{
 }
 </style>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-
-
-        $('#errormessage').hide();
-
-        var url = "/Home/QRPreviewPDFAsHtml";
-        $.ajax({
-            url: url,
-            data: {
-                seckey: "9650ba07-2492-4da9-9306-801dece92e07",
-                unitid: "46"
-            },
-                success: function (data) {
-                    if (data.found == 1) {
-                        $("#errormessage").empty().append(data.message).show();
-                    }
-                    else {
-                        $("#errormessage").empty().append(data.message).show();
-                    }
-                }
-            });
-
-    });
-
-function openPDF(file)
-{
-    window.open(file,null, 'resizable,scrollbars');
-}
-
-</script>
-
-
         </div>
         <input data-val="true" data-val-number="The field PageController must be a number." data-val-required="The PageController field is required." id="PageController" name="PageController" type="hidden" value="0">
         <input id="Attachment" name="Attachment" type="hidden" value="">
@@ -163,33 +130,8 @@ function openPDF(file)
 	    </div>
     </div>
 </form>
-
-
-    <script type="text/javascript">
-     $(document).ready(function () {
-        $("#Order").val(0);
-        $("#fromSession").val(0);
-        $("#toSession").val(0);
-        $("#sdate").val("");
-        $("#sTestcenter").val("00000000-0000-0000-0000-000000000000");
-
-        $("#btn").removeAttr("disabled");
-        $("#btnback").removeAttr("disabled");
-
-        $("#btn").bind("click", function() {
-             $("#PageController").val(99);
-             $("#formID").submit();
-         });
-
-        $("#btnback").bind("click", function() {
-             $("#PageController").val(-1);
-             $("#formID").submit();
-         });
-     });
-
-
-</script>
-
+</body>
+</html>
 
 
 
