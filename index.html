@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Multicheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="./assets/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="./assets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="robots" content="noindex,nofollow">
+
+
+<link href="./assets/certificate.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+
+<form action="http://zertifikatepruefen.multicheck.ch/" enctype="multipart/form-data" id="formID" method="post" name="nform">    <div class="wrapper">
+        <div class="header">
+            <div class="header-logo">
+                <img src="./assets/logo.png" alt="Multicheck®">
+            </div>
+        </div>
+
+        <div class="content">
+                <div id="errormessage" style="display: block;"><h1>Eignungsanalyse 2017 / 2018<br>Logistiker/in EFZ</h1><h2>Rafael Dias Caldas</h2><strong>Gewerbe<br><br>Gesamtresultat 45</strong><br> <br><strong>Schulwissen</strong><br>Deutsch 71<br>Französisch 73<br>Mathematik 14<br> <br><strong>Potenzial</strong><br>Logik 33<br>Konzentration 46<br>Merkfähigkeit 69<br> <br><strong>Berufsspezifische Fähigkeiten</strong><br>Vorstellungsvermögen 32<br>Praktisches Grundwissen 52<br><br><br><h2>Das Originalzertifikat findest du in deinem Profil auf<br>www.gateway-junior.org</h2></div>
+                <div id="main">
+
+
+        <style type="text/css">
+        html {
+            color: #333333;
+            font-family: Arial,Verdana,Tahoma,sans-serif;
+            font-size: 12px;
+        }
+        body {
+            color: #333333;
+            font-family: Arial,Verdana,Tahoma,sans-serif;
+            font-size: 12px;
+        }
+        p{
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+        input{
+            font-size: 12px;
+        }
+        #errormessage{
+        	padding:10px;
+            font-size: 20px;
+        }
+        #errormessage h2{
+        	font-size:25px;
+        	margin-bottom: 16px;
+            margin-top: 0;
+        }
+        </style>
+
+
+
+
+                </div>
+
+            </div>
+
+          <div id="main">
+
+
+<style type="text/css">
+html {
+    color: #333333;
+    font-family: Arial,Verdana,Tahoma,sans-serif;
+    font-size: 12px;
+}
+body {
+    color: #333333;
+    font-family: Arial,Verdana,Tahoma,sans-serif;
+    font-size: 12px;
+}
+p{
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 25px;
+}
+input{
+    font-size: 12px;
+}
+#errormessage{
+	padding:10px;
+    font-size: 20px;
+}
+#errormessage h2{
+	font-size:25px;
+	margin-bottom: 16px;
+    margin-top: 0;
+}
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        $('#errormessage').hide();
+
+        var url = "/Home/QRPreviewPDFAsHtml";
+        $.ajax({
+            url: url,
+            data: {
+                seckey: "9650ba07-2492-4da9-9306-801dece92e07",
+                unitid: "46"
+            },
+                success: function (data) {
+                    if (data.found == 1) {
+                        $("#errormessage").empty().append(data.message).show();
+                    }
+                    else {
+                        $("#errormessage").empty().append(data.message).show();
+                    }
+                }
+            });
+
+    });
+
+function openPDF(file)
+{
+    window.open(file,null, 'resizable,scrollbars');
+}
+
+</script>
+
+
+        </div>
+        <input data-val="true" data-val-number="The field PageController must be a number." data-val-required="The PageController field is required." id="PageController" name="PageController" type="hidden" value="0">
+        <input id="Attachment" name="Attachment" type="hidden" value="">
+        <input id="PasswordStart" name="PasswordStart" type="hidden" value="">
+        <input data-val="true" data-val-number="The field fromSession must be a number." data-val-required="The fromSession field is required." id="fromSession" name="fromSession" type="hidden" value="0">
+        <input data-val="true" data-val-number="The field toSession must be a number." data-val-required="The toSession field is required." id="toSession" name="toSession" type="hidden" value="0">
+        <input id="sdate" name="sdate" type="hidden" value="">
+        <input data-val="true" data-val-required="The sTestcenter field is required." id="sTestcenter" name="sTestcenter" type="hidden" value="00000000-0000-0000-0000-000000000000">
+        <input data-val="true" data-val-required="The PersonId field is required." id="PersonId" name="PersonId" type="hidden" value="00000000-0000-0000-0000-000000000000">
+        <input id="Lastname" name="Lastname" type="hidden" value="">
+        <input id="Firstname" name="Firstname" type="hidden" value="">
+        <input data-val="true" data-val-required="The orderName field is required." id="orderName" name="orderName" type="hidden" value="False">
+        <input data-val="true" data-val-required="The orderDate field is required." id="orderDate" name="orderDate" type="hidden" value="False">
+        <input data-val="true" data-val-required="The orderTest field is required." id="orderTest" name="orderTest" type="hidden" value="False">
+        <input id="Lastsearchname" name="Lastsearchname" type="hidden" value="">
+        <input id="Firstsearchname" name="Firstsearchname" type="hidden" value="">
+    </div>
+	    <div class="footer">
+		    <div class="footer-content">
+		    <address>
+			    Version 1.1<br>
+			    <br>
+			    Multicheck AG<br>
+			    Zentweg 9<br>
+			    3006 Bern<br>
+			    031 336 66 11<br>
+			    <a href="mailto:info@multicheck.org">info@multicheck.org</a>
+		    </address>
+		    </div>
+	    </div>
+    </div>
+</form>
+
+
+    <script type="text/javascript">
+     $(document).ready(function () {
+        $("#Order").val(0);
+        $("#fromSession").val(0);
+        $("#toSession").val(0);
+        $("#sdate").val("");
+        $("#sTestcenter").val("00000000-0000-0000-0000-000000000000");
+
+        $("#btn").removeAttr("disabled");
+        $("#btnback").removeAttr("disabled");
+
+        $("#btn").bind("click", function() {
+             $("#PageController").val(99);
+             $("#formID").submit();
+         });
+
+        $("#btnback").bind("click", function() {
+             $("#PageController").val(-1);
+             $("#formID").submit();
+         });
+     });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<script id="wappalyzer" src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script></body></html>
